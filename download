@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Generated reports (don't commit output files)
+CID_Report_*.pdf
+CID_Report_*.xlsx
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local config / secrets
+*.env
+config.local.*
+
+# Font file (user must supply their own)
+DejaVuSans.ttf
+
+# Logo (user must supply their own)
+your_logo.png

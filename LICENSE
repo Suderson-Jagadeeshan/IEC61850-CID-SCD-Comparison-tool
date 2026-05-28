@@ -1,0 +1,57 @@
+PROPRIETARY SOFTWARE LICENSE
+
+Copyright (c) 2024 Suderson Jagadeeshan
+All rights reserved.
+
+Contact: suderson123@gmail.com
+
+─────────────────────────────────────────────────────────────────────────────
+
+GRANT OF USE
+
+Permission is hereby granted to use this software solely for internal
+engineering and project work. You may:
+
+  • Run this software on your own machine or within your organisation
+  • Generate comparison reports for your own engineering projects
+  • Reference the output of this tool in technical documentation
+
+RESTRICTIONS
+
+You may NOT, without prior written permission from the author:
+
+  • Copy, distribute, or share this software or its source code
+  • Modify, adapt, translate, or create derivative works based on this software
+  • Reverse-engineer, decompile, or disassemble this software
+  • Use this software for commercial resale or as part of a paid product/service
+  • Remove, alter, or obscure any copyright, trademark, or proprietary notices
+  • Sub-license or transfer rights to any third party
+
+─────────────────────────────────────────────────────────────────────────────
+
+DISCLAIMER OF WARRANTIES
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+─────────────────────────────────────────────────────────────────────────────
+
+ENGINEERING DISCLAIMER
+
+This tool is intended as an engineering reference aid only. Always verify
+comparison results against the original IEC 61850 configuration files before
+making changes to live substation protection and automation systems.
+
+The author accepts no liability for errors, omissions, or consequential damages
+arising from the use of this tool in critical infrastructure environments.
+
+─────────────────────────────────────────────────────────────────────────────
+
+For permissions beyond the scope of this license, contact:
+suderson123@gmail.com
