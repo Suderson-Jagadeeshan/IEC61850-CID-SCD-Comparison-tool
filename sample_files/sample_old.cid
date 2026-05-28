@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     version="2007" revision="B" release="4">
+
+  <Header id="SampleProject" version="1" revision="0"
+          toolID="TestTool" nameStructure="IEDName"/>
+
+  <IED name="Q01A_XCB01" desc="Old Breaker IED" type="REL670"
+       manufacturer="ABB" configVersion="1">
+
+    <Services>
+      <DynDataSet max="10"/>
+      <GetCBValues/>
+      <ConfReportControl max="5"/>
+    </Services>
+
+    <AccessPoint name="S1">
+      <Server>
+
+        <!-- Logical Device: Protection -->
+        <LDevice inst="PROT">
+          <LN0 lnClass="LLN0" inst="" lnType="LLN0_Type1">
+            <DataSet name="DS_PROT_01" desc="Protection dataset">
+              <FCDA ldInst="PROT" lnClass="PTOC" lnInst="1" doName="Op"   fcda="ST"/>
+              <FCDA ldInst="PROT" lnClass="PTOC" lnInst="1" doName="Str"  fcda="ST"/>
+              <FCDA ldInst="PROT" lnClass="PDIS" lnInst="1" doName="Op"   fcda="ST"/>
+            </DataSet>
+
+            <ReportControl name="RCB_PROT_01" desc="Protection RCB"
+                           datSet="DS_PROT_01" rptID="Q01A_XCB01/PROT/LLN0.RCB_PROT_01"
+                           confRev="1" buffered="true" intgPd="1000">
+              <TrgOps dchg="true" qchg="true" period="false"/>
+              <OptFields seqNum="true" timeStamp="true" dataRef="true"/>
+              <RptEnabled max="1"/>
+            </ReportControl>
+          </LN0>
+
+          <LN lnClass="PTOC" inst="1" lnType="PTOC_Type1" desc="Overcurrent Prot Zone 1">
+            <DOI name="Op">
+              <DAI name="general"><Val>false</Val></DAI>
+            </DOI>
+            <DOI name="Str">
+              <DAI name="general"><Val>false</Val></DAI>
+            </DOI>
+          </LN>
+
+          <LN lnClass="PDIS" inst="1" lnType="PDIS_Type1" desc="Distance Prot Zone 1">
+            <DOI name="Op">
+              <DAI name="general"><Val>false</Val></DAI>
+            </DOI>
+          </LN>
+        </LDevice>
+
+        <!-- Logical Device: Measurements -->
+        <LDevice inst="MEAS">
+          <LN0 lnClass="LLN0" inst="" lnType="LLN0_Type2">
+            <DataSet name="DS_MEAS_01" desc="Measurement dataset">
+              <FCDA ldInst="MEAS" lnClass="MMXU" lnInst="1" doName="PhV"  fcda="MX"/>
+              <FCDA ldInst="MEAS" lnClass="MMXU" lnInst="1" doName="A"    fcda="MX"/>
+              <FCDA ldInst="MEAS" lnClass="MMXU" lnInst="1" doName="TotW" fcda="MX"/>
+            </DataSet>
+
+            <ReportControl name="RCB_MEAS_01" desc="Measurement RCB"
+                           datSet="DS_MEAS_01" rptID="Q01A_XCB01/MEAS/LLN0.RCB_MEAS_01"
+                           confRev="2" buffered="false" intgPd="5000">
+              <TrgOps dchg="false" qchg="false" period="true"/>
+              <OptFields seqNum="true" timeStamp="true"/>
+              <RptEnabled max="3"/>
+            </ReportControl>
+          </LN0>
+
+          <LN lnClass="MMXU" inst="1" lnType="MMXU_Type1" desc="Power Measurements">
+            <DOI name="PhV">
+              <DAI name="phsA"><Val>0.0</Val></DAI>
+            </DOI>
+          </LN>
+        </LDevice>
+
+      </Server>
+    </AccessPoint>
+  </IED>
+
+  <Communication>
+    <SubNetwork name="MMS_LAN" type="8-MMS">
+      <ConnectedAP iedName="Q01A_XCB01" apName="S1">
+        <Address>
+          <P type="IP">192.168.1.101</P>
+          <P type="IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY">192.168.1.1</P>
+          <P type="OSI-TSEL">0001</P>
+          <P type="OSI-SSEL">0001</P>
+          <P type="OSI-PSEL">00000001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+
+</SCL>
