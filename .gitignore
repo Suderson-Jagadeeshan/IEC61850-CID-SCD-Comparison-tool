@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
