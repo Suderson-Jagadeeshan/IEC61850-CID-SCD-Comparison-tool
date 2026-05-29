@@ -11,7 +11,7 @@ configuration changes across substation IEDs — without manually diffing XML.
 
 Please check the release note v3.1 - EXE File added for user to access the tool easily 
 1. Download the source file >> Extract and keep it in desire folder
-2. download IEC61850 CID/SCD Comparison Tool .v3.1. Zip
+2. download IEC61850 CIDTool .v3.Zip
 3. extract the Zip to the same repo of Source file and enjoy using the tool
 
 ---
