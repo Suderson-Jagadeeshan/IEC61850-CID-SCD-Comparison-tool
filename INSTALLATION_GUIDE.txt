@@ -1,0 +1,101 @@
+================================================================
+  IEC 61850 CID/SCD Comparison Tool v2.0
+  © 2024 Suderson Jagadeeshan
+  suderson123@gmail.com
+================================================================
+
+================================================================
+  FOR USERS  (receiving the .exe file)
+================================================================
+
+WHAT YOU NEED:
+  - Just the EXE file: IEC61850_CIDTool_v2.exe
+  - A license key (email suderson123@gmail.com to request)
+  - Windows 7/8/10/11 (64-bit)
+  - NO Python installation needed!
+
+HOW TO USE:
+  1. Download IEC61850_CIDTool_v2.exe
+  2. Double-click to run
+  3. On first launch, enter your license key when prompted
+  4. Browse your Old and New CID/SCD files
+  5. Select the IED from the dropdown
+  6. Click "Run Comparison"
+
+HOW TO GET A LICENSE:
+  - Email: suderson123@gmail.com
+  - Subject: "CID Tool License Request"
+  - License is FREE and valid for 30 days
+  - Renewable anytime by emailing again
+
+TROUBLESHOOTING:
+  - If Windows shows "Unknown Publisher" warning:
+    Click "More info" → "Run anyway"
+    (This is normal for unsigned applications)
+  - If antivirus blocks it:
+    Add an exception for IEC61850_CIDTool_v2.exe
+    (PyInstaller EXEs sometimes trigger false positives)
+  - If license expired:
+    Email suderson123@gmail.com for a new key
+    Delete the old "license.key" file in the same folder
+
+================================================================
+  FOR SUDERSON  (building the .exe)
+================================================================
+
+REQUIREMENTS:
+  - Python 3.8+ installed
+  - All project files in the same folder:
+      cid_gui.py
+      license_check.py
+
+STEP 1 - Place these files in one folder:
+    cid_gui.py
+    license_check.py
+    build_exe.bat
+    IEC61850_CIDTool.spec  (backup option)
+
+STEP 2 - Double-click build_exe.bat
+    Wait 2-3 minutes for the build to complete
+
+STEP 3 - Find your EXE at:
+    dist\IEC61850_CIDTool_v2.exe
+
+STEP 4 - Test the EXE before sharing:
+    - Double-click the EXE
+    - Enter a test license key
+    - Load sample_old.cid and sample_new.cid
+    - Run comparison
+    - Test Excel and PDF export
+
+STEP 5 - Share with users:
+    Send them ONLY: IEC61850_CIDTool_v2.exe
+    DO NOT send: cid_gui.py, license_check.py, or any .py files
+
+IF build_exe.bat FAILS, use the spec file instead:
+    Open command prompt in your project folder
+    Run: pyinstaller IEC61850_CIDTool.spec
+
+================================================================
+  FILE SUMMARY
+================================================================
+
+SHARE WITH USERS:
+  IEC61850_CIDTool_v2.exe       <- The tool itself
+  INSTALLATION_GUIDE.txt        <- This file (user section only)
+
+KEEP PRIVATE:
+  cid_gui.py                    <- Source code
+  license_check.py              <- Source code
+  license_generator.py          <- SECRET - never share
+  license_log.txt               <- Your records
+  build_exe.bat                 <- Your build script
+  IEC61850_CIDTool.spec         <- Your build config
+
+================================================================
+  CONTACT
+================================================================
+  Suderson Jagadeeshan
+  suderson123@gmail.com
+  © 2024 All rights reserved
+================================================================
